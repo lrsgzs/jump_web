@@ -30,6 +30,13 @@ if (type == null) {
     } else {
         location.href = "https://www.bilibili.com/video/BV" + id;
     }
+} else if (type == "av") {
+    var id = data["i"];
+    if (id == null) {
+        document.getElementById("message").innerHTML = "跳转失败！";
+    } else {
+        location.href = "https://www.bilibili.com/video/AV" + id;
+    }
 } else if (type == "xcc") {
     var id = data["i"];
     if (id == null) {
