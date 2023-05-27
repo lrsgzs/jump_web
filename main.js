@@ -28,7 +28,7 @@ if (type == null) {
     if (id == null) {
         document.getElementById("message").innerHTML = "跳转失败！";
     } else {
-        location.href = "https://www.bilibili.com/video/" + id;
+        location.href = "https://www.bilibili.com/video/BV" + id;
     }
 } else if (type == "xcc") {
     var id = data["i"];
