@@ -19,28 +19,32 @@ function getDecode(str){
       }).join(''));
 }
 
+function crash() {
+    document.getElementById("message").innerHTML = "跳转失败！";
+}
+
 var data = GetRequest();
 var type = data["t"];
 if (type == null) {
-    document.getElementById("message").innerHTML = "跳转失败！";
+    crash();
 } else if (type == "bv") {
     var id = data["i"];
     if (id == null) {
-        document.getElementById("message").innerHTML = "跳转失败！";
+        crash();
     } else {
         location.href = "https://www.bilibili.com/video/BV" + id;
     }
 } else if (type == "av") {
     var id = data["i"];
     if (id == null) {
-        document.getElementById("message").innerHTML = "跳转失败！";
+        crash();
     } else {
         location.href = "https://www.bilibili.com/video/AV" + id;
     }
 } else if (type == "xcc") {
     var id = data["i"];
     if (id == null) {
-        document.getElementById("message").innerHTML = "跳转失败！";
+        crash();
     } else {
         location.href = "https://code.xueersi.com/home/project/detail?lang=code&pid=" + id + "&version=cpp&form=cpp&langType=cpp";
     }
@@ -54,30 +58,37 @@ if (type == null) {
 } else if (type == "xco") {
     var id = data["i"];
     if (id == null) {
-        document.getElementById("message").innerHTML = "跳转失败！";
+        crash();
     } else {
         location.href = "https://code.xueersi.com/home/project/detail?lang=code&pid=" + id + "&version=offline&form=python&langType=python";
     }
 } else if (type == "xcp") {
     var id = data["i"];
     if (id == null) {
-        document.getElementById("message").innerHTML = "跳转失败！";
+        crash();
     } else {
         location.href = "https://code.xueersi.com/home/project/detail?lang=code&pid=" + id + "&version=python&form=python&langType=python";
     }
 } else if (type == "xcs") {
     var id = data["i"];
     if (id == null) {
-        document.getElementById("message").innerHTML = "跳转失败！";
+        crash();
     } else {
         location.href = "https://code.xueersi.com/home/project/detail?lang=scratch&pid=" + id + "&version=3.0&langType=scratch";
     }
 } else if (type == "xcsp") {
     var id = data["i"];
     if (id == null) {
-        document.getElementById("message").innerHTML = "跳转失败！";
+        crash();
     } else {
         location.href = "https://code.xueersi.com/space/" + id;
+    }
+} else if (type == "xcwe") {
+    var id = data["i"];
+    if (id == null) {
+        crash();
+    } else {
+        location.href = "https://code.xueersi.com/live/creator/1?template_project_id=" + id + "&work_type=xes_class_work";
     }
 } else {
     document.getElementById("message").innerHTML = "跳转失败！";
