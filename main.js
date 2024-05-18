@@ -90,6 +90,13 @@ if (type == null) {
     } else {
         location.href = "https://code.xueersi.com/live/creator/1?template_project_id=" + id + "&work_type=xes_class_work";
     }
+} else if (type == "xcdn") {
+    var id = data["i"];
+    if (id == null) {
+        crash();
+    } else {
+        location.href = "https://livefile.xesimg.com/programme/python_assets/" + id;
+    }
 } else {
     document.getElementById("message").innerHTML = "跳转失败！";
 }
